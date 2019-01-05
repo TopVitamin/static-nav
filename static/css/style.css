@@ -1,0 +1,275 @@
+/* ================ reset 样式 start  ================ */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: normal;
+}
+img {
+    border-style: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none
+}
+body {
+    background: #fff;
+
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+/* ================ reset 样式 end  ================ */
+
+
+.inner-center {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+.main {
+    margin-top: 130px;
+}
+/* logo start  */
+.logo-box {
+    display: flex;
+    overflow: hidden;
+    margin-left: 250px;
+    align-items: center;
+}
+.logo-left {
+    position: relative;
+    width: 125px;
+    height: 121px;
+    cursor: pointer;
+}
+.logo-right {
+    padding-left: 36px;
+    font-size: 36px;
+    color: rgba(0, 39, 102, 1);
+    font-family: SourceHanSansSC-regular;
+}
+/* logo end  */
+
+
+/* 搜索框 start */
+.search-section {
+    margin-top: 14px;
+    margin-bottom: 67px;
+}
+.search-section {
+    position: relative;
+    display: flex;
+}
+.search-left {
+    display: flex;
+    width: 877px;
+    height: 54px;
+    line-height: 20px;
+    border: 1px solid rgba(217, 217, 217, 0.96);
+}
+.search-logo {
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    background: url("./img/scgoogle.png") center center no-repeat;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: alpha(opacity=20);
+    -moz-opacity: 0.2;
+    -khtml-opacity: 0.2;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.search-logo:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+.search-methods {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 54px;
+    width: 155px;
+    border: 1px solid rgba(217, 217, 217, 0.96);
+    background-color: #fff;
+}
+.search-methods li {
+    padding-left: 39px;
+    background: url("./img/scgoogle.png") 10px no-repeat;
+    overflow: hidden;
+    height: 34px;
+    line-height: 34px;
+    color: #545454;
+    cursor: pointer;
+}
+.search-logo.baidu, li.baidu {
+    background-image: url("./img/scbaidu.png");
+}
+.search-logo.bing, li.bing {
+    background-image: url("./img/scbing.png");
+}
+.search-logo.sogou, li.sogou {
+    background-image: url("./img/scsogou.png");
+}
+.search-logo.wangpan, li.wangpan {
+    background-image: url("./img/scwangpan.png");
+}
+.search-logo.so, li.so {
+    background-image: url("./img/scso.png");
+}
+.search-logo.google, li.google {
+    background-image: url("./img/scgoogle.png");
+}
+
+.search-methods .search-item:hover {
+    background-color: #f0f0f0;
+}
+
+.search-result {
+    display: none;
+    position: absolute;
+    width: 837px;
+    top: 55px;
+    left: 40px;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+}
+.result-item {
+    height: 34px;
+    line-height: 34px;
+    padding-left: 15px;
+}
+.result-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.input-wrap {
+    position: relative;
+    flex: 1;
+}
+.input-wrap .search-input {
+    height: 52px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    padding-left: 15px;
+}
+.input-wrap .clear-keyword {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #d2d2d2;
+    font-size: 30px;
+}
+
+.search-submit {
+    width: 123px;
+    height: 54px;
+    line-height: 26px;
+    background: url("./img/search.png") #1890ff 60px center no-repeat;
+    -webkit-background-size: 35px 35px;
+    background-size: 35px 35px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-family: Roboto;
+    border: 0;
+    cursor: pointer;
+}
+
+/* 搜索框 end */
+/*  导航内容 start  */
+.nav-content {
+    overflow: hidden;
+}
+/*  导航内容 end  */
+
+.footer {
+    margin-top: 210px;
+    text-align: center;
+    padding-bottom: 14px;
+}
+/*内容区域*/
+
+/*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
+
+.jj-list {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 40px;
+    padding-right: 16px;
+}
+.jj-list:nth-of-type(3n) {
+    padding-right: 0;
+}
+.jj-list-tit {
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+    font-weight: bold;
+}
+.jj-list-con {
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+.jj-list-con li {
+    box-sizing: border-box; /*以IE盒子模型的width为标准*/
+    padding: 1px 1px; /*设置div的内边距*/
+    width: 33.33%; /*div等分成4部分*/
+    float: left;
+}
+
+
+.jj-list-link {
+    display: block;
+    background: #ece8e2 96%;
+    color: #333;
+    font-size: 13px;
+    text-align: center;
+    line-height: 44px;
+    transition: all 0.2s;
+    border-radius: 2px;
+}
+.jj-list-link:hover {
+    background: #1890ff;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
+
+
