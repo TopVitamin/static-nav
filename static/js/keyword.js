@@ -78,6 +78,18 @@ $(function () {
     $(document).trigger(EVENT_CLEAR_KEYWORD);
   });
 
+  // 点击高亮显示
+  $('#search_keyword').on('focus',  function () {
+    $('.search-left').css(
+      {
+        "border-style":"solid",
+        "border-color": "rgba(24, 144, 255, 1)",
+        "box-shadow": "0px 0px 2px 1px rgba(145, 213, 255, 0.96)",
+      }
+    );
+  }).on('blur',  function () {
+    $('.search-left').prop('style','');
+  });
   // 搜索
   $('#search_submit').on('click', function () {
     var keyword = $('#search_keyword').val();
@@ -90,6 +102,7 @@ $(function () {
     }
   });
 
+ 
   // 推荐结果跳转
   $('#search_result').on('click', 'li', function () {
     var word = $(this).text();

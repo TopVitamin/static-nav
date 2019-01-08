@@ -22,10 +22,12 @@ li {
 a {
     text-decoration: none
 }
-body {
+html, body {
     background: #fff;
+    height: 100%;
 
 }
+
 
 input[type="button"], input[type="submit"], input[type="reset"] {
     -webkit-appearance: none;
@@ -42,11 +44,24 @@ textarea {
 .inner-center {
     width: 1000px;
     margin: 0 auto;
+ 
 }
 
-
 .main {
-    margin-top: 130px;
+    padding-top: 5%;
+    min-height: 100%;
+   
+}
+.content-inside{
+   padding-bottom: 60px;
+}
+.footer {
+    height: 60px;
+    text-align: center;
+    margin-top: -60px; 
+    /* position: relative;
+    margin-top: -100px; 
+    clear:both; */
 }
 /* logo start  */
 .logo-box {
@@ -73,7 +88,7 @@ textarea {
 /* 搜索框 start */
 .search-section {
     margin-top: 14px;
-    margin-bottom: 67px;
+    margin-bottom: 40px;
 }
 .search-section {
     position: relative;
@@ -183,6 +198,16 @@ textarea {
     font-size: 16px;
     padding-left: 15px;
 }
+/* .input-wrap .search-input:focus{
+	border-style:solid;
+	border-color: #FDA31E 96%;
+	box-shadow: 0 0 10px #FDA31E;
+    } */
+/* .search-left:focus{
+    border-style:solid;
+    border-color: #FDA31E 96%;
+    box-shadow: 0 0 10px #FDA31E;
+    } */
 .input-wrap .clear-keyword {
     display: none;
     position: absolute;
@@ -198,14 +223,14 @@ textarea {
     width: 123px;
     height: 54px;
     line-height: 26px;
-    background: url("./img/search.png") #1890ff 60px center no-repeat;
+    background: url("./img/search.png") #1890ff 48px center no-repeat;
     -webkit-background-size: 35px 35px;
     background-size: 35px 35px;
     color: #fff;
     font-size: 18px;
     text-align: center;
     font-family: Roboto;
-    border: 0;
+    border: 1px solid #1890ff;
     cursor: pointer;
 }
 
@@ -216,11 +241,7 @@ textarea {
 }
 /*  导航内容 end  */
 
-.footer {
-    margin-top: 210px;
-    text-align: center;
-    padding-bottom: 14px;
-}
+
 /*内容区域*/
 
 /*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
@@ -228,7 +249,7 @@ textarea {
 .jj-list {
     width: 33.33%;
     float: left;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding-right: 16px;
 }
 .jj-list:nth-of-type(3n) {
@@ -237,7 +258,7 @@ textarea {
 .jj-list-tit {
     font-size: 16px;
     line-height: 25px;
-    color: #333;
+    color: rgba(49, 70, 89, 1);
     font-weight: bold;
 }
 .jj-list-con {
@@ -255,8 +276,8 @@ textarea {
 
 .jj-list-link {
     display: block;
-    background: #ece8e2 96%;
-    color: #333;
+    background: rgba(230, 247, 255, 0.96);
+    color:rgba(49, 70, 89, 1);
     font-size: 13px;
     text-align: center;
     line-height: 44px;
@@ -264,7 +285,7 @@ textarea {
     border-radius: 2px;
 }
 .jj-list-link:hover {
-    background: #1890ff;
+    background: #1890FF 100%;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
