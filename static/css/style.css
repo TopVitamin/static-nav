@@ -181,6 +181,9 @@ textarea {
     line-height: 34px;
     padding-left: 15px;
 }
+.result-item.active {
+    background: #F0F0F0;
+}
 .result-item:hover {
     background-color: #eee;
     cursor: pointer;

@@ -6,7 +6,7 @@ $(function () {
       localStorage.setItem('SearchType', type);
     },
     get: function () {
-      return localStorage.getItem('SearchType');
+      return localStorage.getItem('SearchType') || 'baidu';
     },
   };
 
@@ -50,17 +50,63 @@ $(function () {
     var $keyword = $(this);
     var keyword = $keyword.val();
     if(event.which==13){
+    	if($('#search_result .active').length>0){
+    		keyword = $('#search_result .active').eq(0).text();
+    	}
       openSearch(keyword)
       return;
     }
     // TODO 上下键选择待选答案
-    keywordChange(keyword);
+    var bl = moveChange(event);
+    if(bl){
+    	keywordChange(keyword);
+    }
   }).on('blur', function () {
-    // $('#search_result').hide();
+    $('#search_result').hide();
   }).on('focus', function () {
     var keyword = $(this).val();
     keywordChange(keyword);
   });
+  
+  function moveChange(e){
+		var k = e.keyCode || e.which;
+		var bl = true;
+		switch(k){
+			case 38:
+				rowMove('top');
+				bl = false;
+				break;
+			case 40:
+				rowMove('down');
+				bl = false;
+				break;
+		}
+		return bl;
+	}
+  function rowMove(move){
+  	var search_result = $('#search_result');
+  	var hove_li = null;
+  	search_result.find('.result-item').each(function(){
+  		if($(this).hasClass('active')){
+  			hove_li = $(this).index();
+  		}
+  	});
+  	if(move == 'top'){
+  		if(hove_li==null){
+	  		hove_li = search_result.find('.result-item').length-1;
+	  	}else{
+	  		hove_li--;
+	  	}
+  	}else if(move == 'down'){
+  		if(hove_li==null){
+	  		hove_li = 0;
+	  	}else{
+	  		hove_li==search_result.find('.result-item').length-1?(hove_li=0):(hove_li++);
+	  	}
+  	}
+  	search_result.find('.active').removeClass('active');
+  	search_result.find('.result-item').eq(hove_li).addClass('active');
+  }
 
   function keywordChange(keyword) {
     if (keyword === '') {
