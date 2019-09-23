@@ -44,23 +44,21 @@ textarea {
 .inner-center {
     width: 1000px;
     margin: 0 auto;
- 
 }
 
 .main {
     padding-top: 5%;
     min-height: 100%;
-   
 }
 .content-inside{
-   padding-bottom: 60px;
+    padding-bottom: 60px;
 }
 .footer {
     height: 60px;
     text-align: center;
-    margin-top: -60px; 
+    margin-top: -60px;
     /* position: relative;
-    margin-top: -100px; 
+    margin-top: -100px;
     clear:both; */
 }
 /* logo start  */
@@ -249,27 +247,27 @@ textarea {
 
 /*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
 
-.jj-list {
+.sample-list {
     width: 33.33%;
     float: left;
     margin-bottom: 30px;
     padding-right: 16px;
 }
-.jj-list:nth-of-type(3n) {
+.sample-list:nth-of-type(3n) {
     padding-right: 0;
 }
-.jj-list-tit {
+.sample-list-tit {
     font-size: 16px;
     line-height: 25px;
     color: rgba(49, 70, 89, 1);
     font-weight: bold;
 }
-.jj-list-con {
+.sample-list-con {
     overflow: hidden;
     margin: 0 auto;
 
 }
-.jj-list-con li {
+.sample-list-con li {
     box-sizing: border-box; /*以IE盒子模型的width为标准*/
     padding: 1px 1px; /*设置div的内边距*/
     width: 33.33%; /*div等分成4部分*/
@@ -277,7 +275,7 @@ textarea {
 }
 
 
-.jj-list-link {
+.sample-list-link {
     display: block;
     background: rgba(230, 247, 255, 0.96);
     color:rgba(49, 70, 89, 1);
@@ -287,7 +285,7 @@ textarea {
     transition: all 0.2s;
     border-radius: 2px;
 }
-.jj-list-link:hover {
+.sample-list-link:hover {
     background: #1890FF 100%;
     font-size: 18px;
     font-weight: bold;
@@ -295,5 +293,3 @@ textarea {
 }
 
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
-
-
