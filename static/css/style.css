@@ -25,32 +25,22 @@ a {
 html, body {
     background: #fff;
     height: 100%;
-
 }
-
-
 input[type="button"], input[type="submit"], input[type="reset"] {
     -webkit-appearance: none;
     outline: 0;
 }
-
 textarea {
     -webkit-appearance: none;
 }
-
 /* ================ reset 样式 end  ================ */
-
-
 .inner-center {
     width: 1000px;
     margin: 0 auto;
- 
 }
-
 .main {
     padding-top: 5%;
     min-height: 100%;
-   
 }
 .content-inside{
    padding-bottom: 60px;
@@ -63,28 +53,24 @@ textarea {
     margin-top: -100px; 
     clear:both; */
 }
+.footer a, a:link, a:hover, a:visited, a:active {
+    color: rgba(49, 70, 89, 1);
+}
+.footer p{
+    margin: 16px 0;
+}
 /* logo start  */
 .logo-box {
-    display: flex;
     overflow: hidden;
-    margin-left: 250px;
     align-items: center;
-}
-.logo-left {
-    position: relative;
-    width: 125px;
-    height: 121px;
-    cursor: pointer;
-}
-.logo-right {
-    padding-left: 36px;
     font-size: 36px;
-    color: rgba(0, 39, 102, 1);
+    color: #333;
     font-family: SourceHanSansSC-regular;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 31px;
 }
 /* logo end  */
-
-
 /* 搜索框 start */
 .search-section {
     margin-top: 14px;
@@ -162,11 +148,9 @@ textarea {
 .search-logo.google, li.google {
     background-image: url("./img/scgoogle.png");
 }
-
 .search-methods .search-item:hover {
     background-color: #f0f0f0;
 }
-
 .search-result {
     display: none;
     position: absolute;
@@ -188,7 +172,6 @@ textarea {
     background-color: #eee;
     cursor: pointer;
 }
-
 .input-wrap {
     position: relative;
     flex: 1;
@@ -221,7 +204,6 @@ textarea {
     color: #d2d2d2;
     font-size: 30px;
 }
-
 .search-submit {
     width: 123px;
     height: 54px;
@@ -236,21 +218,16 @@ textarea {
     border: 1px solid #1890ff;
     cursor: pointer;
 }
-
 /* 搜索框 end */
 /*  导航内容 start  */
 .nav-content {
     overflow: hidden;
 }
 /*  导航内容 end  */
-
-
 /*内容区域*/
-
 /*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
-
 .jj-list {
-    width: 33.33%;
+    width: 100%;
     float: left;
     margin-bottom: 30px;
     padding-right: 16px;
@@ -259,25 +236,28 @@ textarea {
     padding-right: 0;
 }
 .jj-list-tit {
+    box-sizing: border-box; /*以IE盒子模型的width为标准*/
     font-size: 16px;
     line-height: 25px;
     color: rgba(49, 70, 89, 1);
     font-weight: bold;
+    width: 100%; /*div等分成4部分*/
+    margin: 0 0 10px 31px;
+}
+.jj-list-tit span{
+    font-weight: normal;
 }
 .jj-list-con {
     overflow: hidden;
     margin: 0 auto;
-
 }
 .jj-list-con li {
     box-sizing: border-box; /*以IE盒子模型的width为标准*/
     padding: 1px 1px; /*设置div的内边距*/
-    width: 33.33%; /*div等分成4部分*/
+    width: 16.6%; /*div等分成4部分*/
     float: left;
 }
-
-
-.jj-list-link {
+.jj-list-con li a{
     display: block;
     background: rgba(230, 247, 255, 0.96);
     color:rgba(49, 70, 89, 1);
@@ -287,13 +267,10 @@ textarea {
     transition: all 0.2s;
     border-radius: 2px;
 }
-.jj-list-link:hover {
+.jj-list-con li a:hover {
     background: #1890FF 100%;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
 }
-
 /*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
-
-

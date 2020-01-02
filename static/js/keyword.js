@@ -6,7 +6,7 @@ $(function () {
       localStorage.setItem('SearchType', type);
     },
     get: function () {
-      return localStorage.getItem('SearchType') || 'baidu';
+      return localStorage.getItem('SearchType') || 'google';
     },
   };
 
