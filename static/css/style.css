@@ -99,7 +99,7 @@ textarea {
     width: 40px;
     align-items: center;
     justify-content: center;
-    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scgoogle.png") center center no-repeat;
+    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png") center center no-repeat;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -132,7 +132,7 @@ textarea {
 }
 .search-methods li {
     padding-left: 39px;
-    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scgoogle.png") 10px no-repeat;
+    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png") 10px no-repeat;
     overflow: hidden;
     height: 34px;
     line-height: 34px;
@@ -140,22 +140,22 @@ textarea {
     cursor: pointer;
 }
 .search-logo.baidu, li.baidu {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scbaidu.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scbaidu.png");
 }
 .search-logo.bing, li.bing {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scbing.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scbing.png");
 }
 .search-logo.sogou, li.sogou {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scsogou.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scsogou.png");
 }
 .search-logo.wangpan, li.wangpan {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scwangpan.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scwangpan.png");
 }
 .search-logo.so, li.so {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scso.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scso.png");
 }
 .search-logo.google, li.google {
-    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/scgoogle.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png");
 }
 .search-methods .search-item:hover {
     background-color: #f0f0f0;
@@ -219,7 +219,7 @@ textarea {
     min-width: 44px;
     height: 44px;
     line-height: 26px;
-    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@v1.6/static/css/img/search.png") #1890ff  center no-repeat;
+    background: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/search.png") #1890ff  center no-repeat;
     -webkit-background-size: 30px 30px;
     background-size: 30px 30px;
     color: #fff;
@@ -276,16 +276,25 @@ textarea {
     background: rgba(230, 247, 255, 0.96);
     color:rgba(49, 70, 89, 1);
     font-size: 13px;
-    text-align: center;
+    text-align: left;
+    padding-left: 1.7em;
     line-height: 44px;
     transition: all 0.2s;
     border-radius: 2px;
+}
+.jj-list-con li a img{
+    height: 13px;
+    margin-right: 8px;
 }
 .jj-list-con li a:hover {
     background: #1890FF 100%;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
+}
+.jj-list-con li a:hover img{
+    height: 18px;
+    margin-right: 8px;
 }
 /* 导航栏样式 */
 .navigation{
@@ -354,6 +363,9 @@ textarea {
 @media screen and (max-device-width: 768px) {
 .jj-list-con li {
     width: 33.3%; /*div等分成3部分*/
+}
+.jj-list-con li a{
+    padding-left: 0.7em;
 }
 .search-left {
     height: 39px;
