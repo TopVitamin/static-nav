@@ -1,5 +1,4 @@
 $(function () {
-
   // 默认搜索引擎记录
   var searchTypeStore = {
     set: function (type) {
@@ -9,12 +8,10 @@ $(function () {
       return localStorage.getItem('SearchType') || 'google';
     },
   };
-
   var $searchMethods = $('#search_methods');
   var $searchLogo = $('#search_logo');
   var initSearchType = searchTypeStore.get();
   $searchLogo.addClass(initSearchType).data('type', initSearchType);
-
   var search_types = [
     { url: 'https://www.baidu.com/s?wd=', type: 'baidu' },
     { url: 'https://www.sogou.com/web?query=', type: 'sogou' },
@@ -28,7 +25,6 @@ $(function () {
   $searchLogo.on('click', function () {
     $searchMethods.show();
   });
-
   // 搜索引擎切换
   $searchMethods.on('click', 'li', function () {
     var type = $(this).data('type');
@@ -42,7 +38,6 @@ $(function () {
   $searchMethods.on('mouseleave', function () {
     $searchMethods.hide();
   });
-
   var EVENT_CLEAR_KEYWORD = 'clearKeyword';
   var EVENT_SEARCH = 'search';
   // 关键词搜索输入
@@ -56,6 +51,7 @@ $(function () {
       openSearch(keyword)
       return;
     }
+// 关键词联想提示，跟其他2个插件冲突，因为我只用 Google ，没有 fix。
     // TODO 上下键选择待选答案
     var bl = moveChange(event);
     if(bl){
@@ -67,7 +63,6 @@ $(function () {
     var keyword = $(this).val();
     keywordChange(keyword);
   });
-  
   function moveChange(e){
 		var k = e.keyCode || e.which;
 		var bl = true;
@@ -107,7 +102,6 @@ $(function () {
   	search_result.find('.active').removeClass('active');
   	search_result.find('.result-item').eq(hove_li).addClass('active');
   }
-
   function keywordChange(keyword) {
     if (keyword === '') {
       $(document).trigger(EVENT_CLEAR_KEYWORD);
@@ -116,14 +110,12 @@ $(function () {
       $('#clear_keyword').show();
     }
   }
-
   // 清空输入框
   $('#clear_keyword').on('click', function () {
     $('#search_keyword').val('');
     $('#search_keyword').focus();
     $(document).trigger(EVENT_CLEAR_KEYWORD);
   });
-
   // 点击高亮显示
   $('#search_keyword').on('focus',  function () {
     $('.search-left').css(
@@ -147,8 +139,6 @@ $(function () {
       window.open(baseUrl.url + keyword);
     }
   });
-
- 
   // 推荐结果跳转
   $('#search_result').on('click', 'li', function () {
     var word = $(this).text();
@@ -156,7 +146,6 @@ $(function () {
     openSearch(word);
     $('#search_result').hide();
   });
-
   $(document).on(EVENT_CLEAR_KEYWORD, function () {
     $('#clear_keyword').hide();
     $('#search_result').hide();
@@ -164,12 +153,10 @@ $(function () {
   $(document).on(EVENT_SEARCH, function (e, keyword) {
     getSearchResult(keyword);
   });
-
   // 获取搜索引擎类型
   function getSeachType() {
     return $('#search_logo').data('type');
   }
-
   // google 搜索结果
   function searchResultGoogle(data) {
     var result = data[1];
@@ -178,7 +165,6 @@ $(function () {
     });
     renderSearchResult(result);
   }
-
   // 百度 搜索结果
   function searchResultBaidu(data) {
     if (data === undefined) {
@@ -187,7 +173,6 @@ $(function () {
     var result = data.s;
     renderSearchResult(result);
   }
-
   // 渲染搜索结果
   function renderSearchResult(array) {
     var $result = $('#search_result');
@@ -202,10 +187,8 @@ $(function () {
     }
     $result.show();
   }
-
   window.searchResultGoogle = searchResultGoogle;
   window.searchResultBaidu = searchResultBaidu;
-
   var search_suggest = {
     baidu: {
       url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
@@ -236,7 +219,6 @@ $(function () {
       },
     },
   };
-
   function getSearchResult(keyword) {
     var searchType = getSeachType();
     var suggest = search_suggest[searchType];
@@ -249,7 +231,6 @@ $(function () {
       data: suggest.data(keyword),
     });
   }
-
   function openSearch(keyword) {
     var type = getSeachType();
     var baseUrl = search_types.find(function (item) {
@@ -259,4 +240,30 @@ $(function () {
       window.open(baseUrl.url + keyword);
     }
   }
+$(function(){
+    var page_heig = $(document).scrollTop();            /* 初始化。用于第一次获取滚动条的高度 */
+    var navigation = $('.navigation').outerHeight();    /* 获取该元素的高度 */
+    $(window).scroll(function() {                       /* 滚动条触发事件 */
+        var real_heig = $(document).scrollTop();        /* 事件触发后获取滚动条高度 */
+        if (real_heig > navigation){                    /* 触发后的高度 与 元素的高度对比 */
+            $('.navigation').addClass('show_header');          /* True 添加隐藏属性 */
+        }else {
+            $('.navigation').removeClass('show_header');       /* False 删除隐藏属性 */
+        }
+        if (real_heig < page_heig){                     /* 触发后的高度 与 上次触发后的高度 */
+            $('.navigation').removeClass('show_header');       /* True 删除隐藏属性 */
+        }
+        page_heig = $(document).scrollTop();            /* 再次获取滚动条的高度，用于下次触发事件后的对比 */
+     });
+});
+/*back to top */
+$('.to-top').toTop({
+  //options with default values
+  autohide: true,
+  offset: 420,
+  speed: 500,
+  position: true,
+  right: 13,
+  bottom: 31
+});
 });
