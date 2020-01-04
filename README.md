@@ -9,7 +9,7 @@
 ### 老版本 mdWiki
 - [https://favorite.wiki/old](https://favorite.wiki/old)
 
-### [LICENSE](https://github.com/eallion/GLWTPL/blob/master/translations/LICENSE_zh-CN)
+### LICENSE
 ```
 GLWT（祝你好运）公共许可证
 版权所有（C）每个人，除了作者
