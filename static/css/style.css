@@ -7,6 +7,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+@font-face{font-family:"FZXiJinLJW";src:url(/assets/FZXiJinLJW.ttf) format("truetype")}
 body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
     margin: 0px;
     padding: 0px;
@@ -353,7 +354,7 @@ textarea {
     display: none;
 }
 .jinrishici-desc{
-    font-family: 'Zhi Mang Xing', cursive;
+    font-family: 'FZXiJinLJW';
     font-weight: normal;
     white-space:nowrap;
     font-size: 1.3em;
