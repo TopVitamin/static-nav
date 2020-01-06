@@ -2,6 +2,16 @@
 ### Fork from
 [https://github.com/TopVitamin/static-nav](https://github.com/TopVitamin/static-nav)
 
+### 优化与负优化
+- 手机自适应
+- Google CN API 自动获取 favicon.ico
+- 腾讯公益 404
+- 今日诗词 API
+- jsDelivr CDN
+- smoothScroll
+- toTop
+- Google fonts
+
 ### Live Demo
 - [https://s.eallion.com](https://s.eallion.com)
 - [https://favorite.wiki](https://favorite.wiki)
