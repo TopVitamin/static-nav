@@ -226,15 +226,22 @@ textarea {
     width: 123px;
     height: 54px;
     line-height: 26px;
-    background: url("./img/search.png") #1890ff 48px center no-repeat;
+    /* background: url("./img/search.png") #1890ff 48px center no-repeat; */
+    background-color: #1890FF;
+    /* background-image: url("./img/search.png"); 
+    background-size: 48px; */
+    background-repeat: no-repeat;
+    background-position: center;
     -webkit-background-size: 35px 35px;
     background-size: 35px 35px;
     color: #fff;
     font-size: 18px;
+    font-weight: 500;
     text-align: center;
     font-family: Roboto;
     border: 1px solid #1890ff;
     cursor: pointer;
+    background: linear-gradient(90deg,#1890FF,#455bfb);
 }
 
 /* 搜索框 end */
