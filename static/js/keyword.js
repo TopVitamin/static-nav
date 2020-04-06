@@ -253,7 +253,6 @@ $(function () {
 
   function openSearch(keyword) {
     var type = getSeachType();
-    console.log('type', type)
     var baseUrl = search_types.find(function (item) {
       return item.type === type;
     });
