@@ -257,7 +257,7 @@ $(function () {
       return item.type === type;
     });
     if (baseUrl && keyword) {
-      window.open(baseUrl.url + keyword);
+      window.open(baseUrl.url + keyword, keyword);
     }
   }
 });
