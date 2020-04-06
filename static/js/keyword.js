@@ -47,8 +47,7 @@ $(function () {
   var EVENT_SEARCH = 'search';
   // 关键词搜索输入
   $('#search_keyword').on('keyup', function (event) {
-    var $keyword = $(this);
-    var keyword = $keyword.val();
+    var keyword = $(this).val();
     if(event.which==13){
     	if($('#search_result .active').length>0){
     		keyword = $('#search_result .active').eq(0).text();
@@ -61,8 +60,18 @@ $(function () {
     if(bl){
     	keywordChange(keyword);
     }
-  }).on('blur', function () {
+  }).on('blur', function () { 
+  // 推荐结果跳转
+  $('#search_result').on('click', 'li', function () {
+    var word = $(this).text();
+    $('#search_keyword').val(word);
+    openSearch(word);
     $('#search_result').hide();
+  });
+  // 解决失焦和点击事件冲突问题
+  setTimeout(function() {
+    $('#search_result').hide();
+  }, 100)
   }).on('focus', function () {
     var keyword = $(this).val();
     keywordChange(keyword);
@@ -105,7 +114,8 @@ $(function () {
 	  	}
   	}
   	search_result.find('.active').removeClass('active');
-  	search_result.find('.result-item').eq(hove_li).addClass('active');
+    search_result.find('.result-item').eq(hove_li).addClass('active');
+    $('#search_keyword').val(search_result.find('.result-item').eq(hove_li).addClass('active').text());
   }
 
   function keywordChange(keyword) {
@@ -146,15 +156,6 @@ $(function () {
     if (baseUrl && keyword) {
       window.open(baseUrl.url + keyword);
     }
-  });
-
- 
-  // 推荐结果跳转
-  $('#search_result').on('click', 'li', function () {
-    var word = $(this).text();
-    $('#search_keyword').val(word);
-    openSearch(word);
-    $('#search_result').hide();
   });
 
   $(document).on(EVENT_CLEAR_KEYWORD, function () {
