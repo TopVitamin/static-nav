@@ -242,7 +242,7 @@ textarea {
     width: 100%;
     float: left;
     margin-top: 30px;
-    padding-right: 16px;
+    /*padding-right: 16px;*/
 }
 .jj-list:nth-of-type(3n) {
     padding-right: 0;
