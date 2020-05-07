@@ -274,7 +274,8 @@ textarea {
 }
 .jj-list-con li a{
     display: block;
-    background: rgba(230, 247, 255, 0.96);
+    /*background: rgba(230, 247, 255, 0.96);*/
+    background: #f2f2f2;
     color:rgba(49, 70, 89, 1);
     font-size: 13px;
     text-align: left;
