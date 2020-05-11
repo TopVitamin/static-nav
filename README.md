@@ -43,6 +43,3 @@ GLWT（祝你好运）公共许可证
 
 祝你好运及一帆风顺。
 ```
-
-### Screenshot
-![](screenshot.png)
