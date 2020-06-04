@@ -25,7 +25,7 @@ jobs:
         with:
           driver: oss
           region: cn-shanghai
-          bucket: eallion-status
+          bucket: eallion-nav
           dist: ./
         env:
           UPTOC_UPLOADER_AK: ${{ secrets.ACCESS_KEY_ID }}
