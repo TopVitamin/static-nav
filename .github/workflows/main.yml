@@ -13,6 +13,12 @@ jobs:
        # with:
        #   submodules: true
 
+      # 部署前删掉一些无用文件以节省流量
+      - name: Delete git
+        run: |
+          rm -rf .git
+          rm -rf .github
+
       # 部署到阿里云 OSS
       - name: Deploy to OSS
         uses: saltbo/uptoc@master
