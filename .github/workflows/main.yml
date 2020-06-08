@@ -19,7 +19,7 @@ jobs:
         with:
           driver: oss
           region: cn-shanghai
-          bucket: eallion-favorite
+          bucket: ${{ secrets.bucket }}
           exclude: .git
           dist: ./
         env:
