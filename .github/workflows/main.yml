@@ -13,12 +13,6 @@ jobs:
        # with:
        #   submodules: true
 
-      # 部署前删掉一些无用文件以节省流量
-      - name: Delete git
-        run: |
-          rm -rf .git
-          rm -rf .github
-
       # 部署到阿里云 OSS
       - name: Deploy to OSS
         uses: saltbo/uptoc@master
@@ -26,6 +20,7 @@ jobs:
           driver: oss
           region: cn-shanghai
           bucket: eallion-favorite
+          exclude: .git,.github
           dist: ./
         env:
           UPTOC_UPLOADER_AK: ${{ secrets.ACCESS_KEY_ID }}
