@@ -20,7 +20,7 @@ jobs:
           driver: oss
           region: cn-shanghai
           bucket: ${{ secrets.bucket }}
-          exclude: .git
+          exclude: .git,.github
           dist: ./
         env:
           UPTOC_UPLOADER_AK: ${{ secrets.ACCESS_KEY_ID }}
