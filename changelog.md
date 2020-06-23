@@ -1,19 +1,26 @@
 # Change Log 
 > *本站源码*：[https://github.com/eallion/favorite](https://github.com/eallion/favorite)
 
-### Ver 5.0 Release
+### Ver 5.1
+>Update: 2020.05.08
+
+- Update CSS
+- s.eallion.com 托管在阿里云OSS
+- favorite.wiki 托管在 GitHub Pages
+
+### Ver 5.0 
 >Update：2020.01.03
 
 - 换成纯静态网页
     - Forks from: [https://github.com/TopVitamin/static-nav](https://github.com/TopVitamin/static-nav)
 - 取消了阿里云 CDN
-- 托管在 Git Pages
+- 托管在 GitHub Pages
 
-### Ver 4.2  Release
+### Ver 4.2
 >Update：2019.05.22
 
  - 优化一些代码
- - 取消了Goole fonts
+ - 取消了Google fonts
 
 
 ### Ver 4.1  
