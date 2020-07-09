@@ -158,6 +158,9 @@ textarea {
 .search-logo.google, li.google {
     background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/scgoogle.png");
 }
+.search-logo.jingdong, li.jingdong {
+    background-image: url("https://cdn.jsdelivr.net/gh/eallion/favorite@master/static/css/img/jingdong.png");
+}
 .search-methods .search-item:hover {
     background-color: #f0f0f0;
 }
