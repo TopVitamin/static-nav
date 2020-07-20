@@ -281,8 +281,41 @@ textarea {
     padding: 1px 1px; /*设置div的内边距*/
     width: 33.33%; /*div等分成4部分*/
     float: left;
+    transform-origin: center top;
 }
 
+.jj-list-con li:hover {
+    animation: swing 2s linear 0s 1 forwards
+}
+@keyframes swing {
+    0%, 100% {
+        transform: perspective(200px) rotateX(0);
+    }
+    20% {
+        transform: perspective(200px) rotateX(-45deg);
+    }
+    40% {
+        transform: perspective(200px) rotateX(45deg);
+    }
+    50% {
+        transform: perspective(200px) rotateX(-25deg);
+    }
+    60% {
+        transform: perspective(200px) rotateX(25deg);
+    }
+    70% {
+        transform: perspective(200px) rotateX(-5deg);
+    }
+    80% {
+        transform: perspective(200px) rotateX(5deg);
+    }
+    90% {
+        transform: perspective(200px) rotateX(-3deg);
+    }
+    95% {
+        transform: perspective(200px) rotateX(3deg);
+    }
+}
 
 .jj-list-link {
     display: block;
