@@ -28,7 +28,28 @@ $(function () {
   $searchLogo.on('click', function () {
     $searchMethods.show();
   });
+/*兼容处理 低版本IE*/
+//
+Array.prototype.find || (Array.prototype.find = function (predicate) {
+    if (this == null) {
+      throw new TypeError('Array.prototype.find called on null or undefined');
+    }
+    if (typeof predicate !== 'function') {
+      throw new TypeError('predicate must be a function');
+    }
+    var list = Object(this);
+    var length = list.length || 0;
+    var thisArg = arguments[1];
+    var value;
 
+    for (var i = 0; i < length; i++) {
+      value = list[i];
+      if (predicate.call(thisArg, value, i, list)) {
+        return value;
+      }
+    }
+    return null;
+})
   // 搜索引擎切换
   $searchMethods.on('click', 'li', function () {
     var type = $(this).data('type');
